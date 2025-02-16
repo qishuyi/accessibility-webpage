@@ -15,18 +15,245 @@
 
   <!-- page content goes into <body> -->
   <body>
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
+    <div>
+      <div id="mainTitle">
+        <div id="pageTitle">
+          <h1>Accessible Components</h1>
+        </div>
+        <div id="nameAndTime">
+          <h3>Shuyi Qi 2025/02</h3>
+        </div>
+      </div>
+      <div class="sectionTitle">
+        <h2>1. Inputs</h1>
+        <h4 class="sectionIntro">Analyzing the inputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
+        <table>
+          <tr>
+            <th></th>
+            <th>Chrome</th>
+            <th>PhotoShop</th>
+            <th>PowerPoint</th>
+          </tr>
+          <tr>
+            <th>Mouse/Touchpad</th>
+            <td>
+              <ul>
+                <li>Click elsewhere outside of the search box to return to the normal state.</li>
+                <li>Click on the search box to go to focus state.</li>
+                <li>Hover over the star button or click on it.</li>
+                <li>Drag and drop text to copy and paste into the search box.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Same as for Chrome except it does not have a star button.</li> 
+                <li>Drag and drop does not do the copying and pasting.</li> 
+                <li>Have to right click -> “Copy” then right click -> “Paste”</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Same as for Chrome and Photoshop except it does not have a star button but has a cross button instead.</li>
+                <li>Copying and pasting works the same as Photoshop.</li>
+                <li>Clicking on the cross button clears the search text.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Keyboard</th>
+            <td>
+              <ul>
+                <li>Use tab key to exit the search box and use Command+L to return to the search box.</li>
+                <li>Use Command+D to click on the star button.</li>
+                <li>Use shift+left/right button to select or Command+A to select all and Command+C to copy. Use Command+V to paste.</li>
+                <li>A dropdown menu occurs while typing, Esc button removes the dropdown menu and up button restores it.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Use tab key to exit the search box and use the up key to return to the search box.</li>
+                <li>Copy and pasting works the same as for Chrome.</li>
+                <li>Esc button clears the text in the search box and up button leaves the search box.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Use Command+Ctrl+U to enter the search box and use tab key to exit.</li>
+                <li>Use Enter key to execute search after entering text.</li>
+                <li>Copy and pasting works the same as Photoshop and Chrome.</li>
+                <li>Esc button works the same as Photoshop and up button moves cursor to the leftmost position of the search text.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Touch (if available)</th>
+            <td>
+              <ul>
+                <li>Touching the search box makes the search box focused and ready to accept text and touching elsewhere removes the focus.</li>
+                <li>After entering text into the search box, touching the cross icon clears the search text. </li>
+              </ul>
+            </td>
+            <td id="na">N/A</td>
+            <td>
+              <ul>
+                <li>Touching the reading glass icon makes the search box appear and touching elsewhere outside the search box makes it disappear.</li>
+                <li>The cross icon works the same as Chrome.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Chrome: Default state is focused and ready to enter text when web browser is opened. Use keyboard to enter text into the search box.
+        </p>
+        <p>
+          Photoshop: Default state is focused and ready to enter text when the search box page is opened. Use keyboard to enter text into the search box.
+        </p>          
+        <p>
+          PowerPoint: Default state is not focused. Use keyboard to enter text into the search box.
+        </p>
+        <p>
+          The dragging and dropping for copy-and-paste functionality in Chrome is memorable, learnable and efficient because it eliminates the need for right clicks and it is more direct to memorize and easier to learn.
+        </p>
+        <p>
+          The Command+Ctrl+U for entering the search box in PowerPoint is learnable, memorable and efficient because this operation is encoded in the search box’s default text and it eliminates the need for moving the cursor. Using up key for returning to the search box is memorable, learnable and efficient because it is visual and intuitive, giving an impression that the search box is of the same hierarchy as all of the buttons and areas below it. 
+        </p>
+        <p>
+          For search boxes, Chrome works the best in terms of accessibility and Photoshop and PowerPoint are similar to each other but less accessible than Chrome.
+        </p>
+      </div>
+      <div class="sectionTitle">
+        <h2>2. Outputs</h1>
+        <h4 class="sectionIntro">Analyzing the outputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
+        <table>
+          <tr>
+            <th></th>
+            <th>Chrome</th>
+            <th>Photoshop</th>
+            <th>PowerPoint</th>
+          </tr>
+          <tr>
+            <th>Mouse/Touchpad</th>
+            <td>
+              <ul>
+                <li>When clicked, the entire search box turns black and the “Search Google or type a URL” placeholder text disappears.</li>
+                <li>A dropdown of possible websites appears when user starts typing but the style of the search box itself does not change.</li>
+                <li>When the user types in the search box and deletes it, the background color of the search box remains black and does not restore its original color.</li>
+                <li>When the user types text into the search box, the star icon disappears.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>When clicked, the borders of the search box are highlighted blue and the placeholder text does not disappear.</li>
+                <li>A cross icon appears when user starts typing and a dropdown appears.</li>
+                <li>When the cross icon is clicked on, the search box returns to the focus state.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Same as Photoshop when clicked except that the borders of the search box are highlighted orange, not blue.</li>
+                <li>Both a cross icon and a dropdown appear when user starts typing.</li>
+                <li>When the cross icon is clicked on, the dropdown disappears and the search box returns to the focus state.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Keyboard</th>
+            <td>
+              <ul>
+                <li>Before the user starts typing, when the user presses the tab key to exit the search box, the color of the search box goes back to its original color, except when the tab key selects one of the options from the dropdown and the search box is filled with text, the color of the search box remains black.</li>
+                <li>When the user uses Command+L to return to the search box, if there is text in the search box, the text is highlighted; otherwise there is a cursor in the search box.</li>
+                <li>When the user uses Command+D to click on the star button and presses Enter to select, the start button is filled with white.</li>
+                <li>When the user selects the text, the background of the selected text is highlighted.</li>
+                <li>A dropdown menu occurs as the user starts typing, pressing the Esc button removes the dropdown menu and up button restores it.</li>
+                <li>After user starts typing, pressing the Tab key moves down the options in the dropdown.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>When the user exits the search box, the borders are no longer highlighted blue and when the user returns to the search box, the borders return to be highlighted.</li>
+                <li>Pressing the Esc button clears the text in the search box.</li>
+                <li>After user starts typing into the search box, pressing the Tab key moves the focus to the cross icon and the cross icon turns blue.</li>
+                <li>Before user starts typing, pressing the Tab key moves the cursor to other buttons.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>The borders are highlighted orange and unhighlighted respectively when the user enters or leaves the search box using keyboard key combinations.</li>
+                <li>Whether the user starts typing into the search box or not, pressing tab clears the search box, makes the cross icon disappear and unhighlights the search box.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Touch (if available)</th>
+            <td>
+              <ul>
+                <li>Touching the search box makes the background of the search box turn gray.</li>
+                <li>A cross icon appears when the user starts typing, touching the cross icon clears the search text.</li>
+              </ul>
+            </td>
+            <td>N/A</td>
+            <td>
+              <ul>
+                <li>Touching the reading glass icon makes the search box appear with a cursor and the background color unchanged.</li>
+                <li>The cross icon works the same as Chrome.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <p>
+          I think the logical focus order for a search box is as follows:
+          <ul>
+            <li>Before the user starts typing, pressing the tab moves the focus to other buttons below it.</li>
+            <li>After the user starts typing, pressing the tab button moves the focus to a cross button.</li>
+            <li>When the focus is already on the cross button, pressing the tab further moves cursor down the options in the dropdown.</li>
+          </ul>
+        </p>
+        <div>
+          Using the screen reader:
+          <p>The screen reader reads out the text entered into the search box.</p>
+          <div>Chrome</div>
+          <ul>
+            <li>When on a button, the screen reader reads out the functionality of that button even though it is just an icon (the bookmark icon).</li>
+          </ul> 
+          <p>PhotoShop</p>
+          <ul>
+            <li>The screen reader tells the user to use “w” key to perform an action listed as an item in the dropdown, in addition to reading out the option.</li>
+          </ul>
+          <p>PowerPoint</p>
+          <ul>
+            <li>The screen reader informs the user of the next steps. For example, it says using up and down keys allows users to navigate items in the dropdown.</li>
+            <li>And when on an item in the dropdown, it says pressing Ctrl-Option-Space selects this item.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sectionTitle">
+        <h2>3. State Models</h1>
+        <h4 class="sectionIntro">Creating state models for the search box component in PowerPoint and making an intentional tradeoff by making the component less usable for mouse users but more usable for keyboard users</h4>
+      </div>
+      <div class="sectionTitle">
+        <h2>4. Component Redesign</h1>
+        <h4 class="sectionIntro">Redesigning the search box component for better user experience</h4>
+      </div>
+      <div class="sectionTitle">
+        <h2>5. Reflection</h1>
+        <h4 class="sectionIntro">Reflecting on the existing search box component and my redesigned component</h4>
+        <ul>
+          <li>The search box for Chrome does well in usability by providing a list of search history when in active state and I incorporated it in my redesign of the PowerPoint search box.</li>
+          <li>The PowerPoint search box does well in accessibility by allowing user to go from active state to original state with a Tab and I kept it in the redesign.</li>
+          <li>When the user switches to the “Selected” state of the search box, the users will want to see the top N most recently searched keywords to refresh their memory in addition to suggestions when they start typing.</li>
+          <li>The current design of PowerPoint search box does not help refresh the user’s memory while they will likely need it and my redesign provides this functionality.</li>
+          <li>In PowerPoint, the screen reader tells the user they can press Ctrl-Option-Space to select an item in the dropdown, which benefits the users with visual impairment because it is difficult for them to click on an item using a mouse.</li>
+          <li>However, for the keyboard shortcut Cmd-Ctrl-U to focus on the search box in PowerPoint, it might not be possible for people without two hands because the keys are far from each other.</li>
+          <li>In this way it makes the design less accessible, and it will negatively impact people with impairments in their hands.</li>
+          <li>I think keyboard and screen reader users are most prioritized and this will lead to a more diversified and user-friendly experience of using keyboard shortcuts.</li>
+          <li>This choice will also make the component more accessible for people who cannot use the mouse.</li>
+        </ul>
+      </div>
+      <div class="sectionTitle">
+        <h2>6. Reference</h2>
+      </div>
     </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
-    </div>
+    
   </body>
 
 </html>
