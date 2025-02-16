@@ -25,8 +25,59 @@
         </div>
       </div>
       <div class="sectionTitle">
-        <h2>1. Inputs</h1>
+        <h2>0. Images</h2>
+        <h4 class="sectionIntro">Images of existing search box components in Chrome, PhotoShop and PowerPoint</h4>
+      </div>
+      <div>
+        <h3>Chrome</h3>
+        <div class="imageLabel">Initial State:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_normal_initial.png" alt="Chrome search box initial state">
+        <div class="imageLabel">Initial State On Hovering:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_hover_initial.png" alt="Chrome search box hover state">
+        <div class="imageLabel">Initial State When Clicked:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_focus_initial.png" alt="Chrome search box focus state">
+        <div class="imageLabel">Initial State On Hovering Over The Bookmark Button:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_hover_star_initial.png" alt="Chrome search box bookmark hovered state">
+        <div class="imageLabel">State When The Bookmark Button is Clicked:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_star_pressed.png" alt="Chrome search box bookmark clicked state">
+        <div class="imageLabel">State When User Is Entering Text:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_enter.png" alt="Chrome search box state when entering text">
+        <div class="imageLabel">Normal State After User Entered Text:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_normal_after_enter.png" alt="Chrome search box normal state after entering text">
+        <div class="imageLabel">State On Hovering After User Entered Text:</div>
+        <img class="searchBoxImage" src="assets/chrome/search_box_chrome_hover_after_enter.png" alt="Chrome search box hover state after entering text">
+      </div>
+      <div>
+        <h3>PhotoShop</h3>
+        <div class="imageLabel">Initial State:</div>
+        <img src="assets/photoshop/search_box_photoshop_normal.png" alt="PhotoShop search box original state">
+        <div class="imageLabel">State On Hovering:</div>
+        <img src="assets/photoshop/search_box_photoshop_hover.png" alt="PhotoShop search box hover state">
+        <div class="imageLabel">Focus State:</div>
+        <img src="assets/photoshop/search_box_photoshop_focus.png" alt="PhotoShop search box focus state">
+        <div class="imageLabel">State When User Is Entering Text:</div>
+        <img src="assets/photoshop/search_box_photoshop_enter.png" alt="PhotoShop search box text entering state">
+        <div class="imageLabel">State When The Cross Button Is Hovered</div>
+        <img src="assets/photoshop/search_box_photoshop_hover_cross.png" alt="PhotoShop search box cancel button hovered state">
+      </div>
+      <div>
+        <h3>PowerPoint</h3>
+        <div class="imageLabel">Initial State:</div>
+        <img src="assets/powerpoint/search_box_powerpoint_normal.png" alt="PowerPoint search box original state">
+        <div class="imageLabel">State On Hovering:</div>
+        <img src="assets/powerpoint/search_box_powerpoint_hover.png" alt="PowerPoint search box Hover state">
+        <div class="imageLabel">Focus State:</div>
+        <img src="assets/powerpoint/search_box_powerpoint_focus.png" alt="PowerPoint search box focus state">
+        <div class="imageLabel">State When User Is Entering Text:</div>
+        <img src="assets/powerpoint/search_box_powerpoint_enter.png" alt="PowerPoint search box text entering state">
+        <div class="imageLabel">State When The Cross Button Is Hovered</div>
+        <img src="assets/powerpoint/search_box_powerpoint_hover_cross.png" alt="PowerPoint search box cancel button hovered state">
+      </div>
+      <div class="sectionTitle">
+        <h2>1. Inputs</h2>
         <h4 class="sectionIntro">Analyzing the inputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
+      </div>
+      <div>
         <table>
           <tr>
             <th></th>
@@ -53,8 +104,8 @@
             </td>
             <td>
               <ul>
-                <li>Same as for Chrome and Photoshop except it does not have a star button but has a cross button instead.</li>
-                <li>Copying and pasting works the same as Photoshop.</li>
+                <li>Same as for Chrome and PhotoShop except it does not have a star button but has a cross button instead.</li>
+                <li>Copying and pasting works the same as PhotoShop.</li>
                 <li>Clicking on the cross button clears the search text.</li>
               </ul>
             </td>
@@ -80,8 +131,8 @@
               <ul>
                 <li>Use Command+Ctrl+U to enter the search box and use tab key to exit.</li>
                 <li>Use Enter key to execute search after entering text.</li>
-                <li>Copy and pasting works the same as Photoshop and Chrome.</li>
-                <li>Esc button works the same as Photoshop and up button moves cursor to the leftmost position of the search text.</li>
+                <li>Copy and pasting works the same as PhotoShop and Chrome.</li>
+                <li>Esc button works the same as PhotoShop and up button moves cursor to the leftmost position of the search text.</li>
               </ul>
             </td>
           </tr>
@@ -106,7 +157,7 @@
           Chrome: Default state is focused and ready to enter text when web browser is opened. Use keyboard to enter text into the search box.
         </p>
         <p>
-          Photoshop: Default state is focused and ready to enter text when the search box page is opened. Use keyboard to enter text into the search box.
+          PhotoShop: Default state is focused and ready to enter text when the search box page is opened. Use keyboard to enter text into the search box.
         </p>          
         <p>
           PowerPoint: Default state is not focused. Use keyboard to enter text into the search box.
@@ -118,17 +169,19 @@
           The Command+Ctrl+U for entering the search box in PowerPoint is learnable, memorable and efficient because this operation is encoded in the search box’s default text and it eliminates the need for moving the cursor. Using up key for returning to the search box is memorable, learnable and efficient because it is visual and intuitive, giving an impression that the search box is of the same hierarchy as all of the buttons and areas below it. 
         </p>
         <p>
-          For search boxes, Chrome works the best in terms of accessibility and Photoshop and PowerPoint are similar to each other but less accessible than Chrome.
+          For search boxes, Chrome works the best in terms of accessibility and PhotoShop and PowerPoint are similar to each other but less accessible than Chrome.
         </p>
       </div>
       <div class="sectionTitle">
-        <h2>2. Outputs</h1>
+        <h2>2. Outputs</h2>
         <h4 class="sectionIntro">Analyzing the outputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
+      </div>
+      <div>
         <table>
           <tr>
             <th></th>
             <th>Chrome</th>
-            <th>Photoshop</th>
+            <th>PhotoShop</th>
             <th>PowerPoint</th>
           </tr>
           <tr>
@@ -150,7 +203,7 @@
             </td>
             <td>
               <ul>
-                <li>Same as Photoshop when clicked except that the borders of the search box are highlighted orange, not blue.</li>
+                <li>Same as PhotoShop when clicked except that the borders of the search box are highlighted orange, not blue.</li>
                 <li>Both a cross icon and a dropdown appear when user starts typing.</li>
                 <li>When the cross icon is clicked on, the dropdown disappears and the search box returns to the focus state.</li>
               </ul>
@@ -227,16 +280,32 @@
         </div>
       </div>
       <div class="sectionTitle">
-        <h2>3. State Models</h1>
+        <h2>3. State Models</h2>
         <h4 class="sectionIntro">Creating state models for the search box component in PowerPoint and making an intentional tradeoff by making the component less usable for mouse users but more usable for keyboard users</h4>
+      </div>
+      <div>
+        <div class="imageLabel">Original State Diagram For Mouse Users:</div>
+        <img src="assets/state_diagrams/state_diagram_original_mouse.png" alt="Original state diagram for mouse users">
+        <div class="imageLabel">Original State Diagram For Keyboard Users:</div>
+        <img src="assets/state_diagrams/state_diagram_original_keyboard.png" alt="Original state diagram for keyboard users">
+        <div class="imageLabel">Revised State Diagram For Mouse Users:</div>
+        <img src="assets/state_diagrams/state_diagram_revised_mouse.png" alt="Revised state diagram for mouse users">
+        <div class="imageLabel">Revised State Diagram For Keyboard Users:</div>
+        <img src="assets/state_diagrams/state_diagram_revised_keyboard.png" alt="Revised state diagram for keyboard users">
       </div>
       <div class="sectionTitle">
         <h2>4. Component Redesign</h1>
         <h4 class="sectionIntro">Redesigning the search box component for better user experience</h4>
       </div>
+      <div>
+        <div class="imageLabel">Redesigned Component:</div>
+        <img src="assets/redesigned_search_box.png" alt="Redesigned search box">
+      </div>
       <div class="sectionTitle">
-        <h2>5. Reflection</h1>
+        <h2>5. Reflection</h2>
         <h4 class="sectionIntro">Reflecting on the existing search box component and my redesigned component</h4>
+      </div>
+      <div>
         <ul>
           <li>The search box for Chrome does well in usability by providing a list of search history when in active state and I incorporated it in my redesign of the PowerPoint search box.</li>
           <li>The PowerPoint search box does well in accessibility by allowing user to go from active state to original state with a Tab and I kept it in the redesign.</li>
