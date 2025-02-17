@@ -8,7 +8,7 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
+    <title>Accessible Components</title>
     <!-- import CSS styles -->
     <link rel="stylesheet" href="styles.css" /> 
   </head>
@@ -21,11 +21,11 @@
           <h1>Accessible Components</h1>
         </div>
         <div id="nameAndTime">
-          <h3>Shuyi Qi 2025/02</h3>
+          <h4>Shuyi Qi 2025/02</h4>
         </div>
       </div>
-      <div class="sectionTitle">
-        <h2>0. Images</h2>
+      <div>
+        <h2 class="sectionTitle">0. Images</h2>
         <h4 class="sectionIntro">Images of existing search box components in Chrome, PhotoShop and PowerPoint</h4>
       </div>
       <div>
@@ -43,7 +43,7 @@
         <div class="imageLabel">State When User Is Entering Text:</div>
         <img class="searchBoxImage" src="assets/chrome/search_box_chrome_enter.png" alt="Chrome search box state when entering text">
         <div class="imageLabel">Normal State After User Entered Text:</div>
-        <img class="searchBoxImage" src="assets/chrome/search_box_normal_after_enter.png" alt="Chrome search box normal state after entering text">
+        <img class="searchBoxImage" src="assets/chrome/search_box_normal_after_enter.png" alt="Chrome search box original state after entering text">
         <div class="imageLabel">State On Hovering After User Entered Text:</div>
         <img class="searchBoxImage" src="assets/chrome/search_box_chrome_hover_after_enter.png" alt="Chrome search box hover state after entering text">
       </div>
@@ -64,17 +64,13 @@
         <h3>PowerPoint</h3>
         <div class="imageLabel">Initial State:</div>
         <img src="assets/powerpoint/search_box_powerpoint_normal.png" alt="PowerPoint search box original state">
-        <div class="imageLabel">State On Hovering:</div>
-        <img src="assets/powerpoint/search_box_powerpoint_hover.png" alt="PowerPoint search box Hover state">
         <div class="imageLabel">Focus State:</div>
         <img src="assets/powerpoint/search_box_powerpoint_focus.png" alt="PowerPoint search box focus state">
         <div class="imageLabel">State When User Is Entering Text:</div>
         <img src="assets/powerpoint/search_box_powerpoint_enter.png" alt="PowerPoint search box text entering state">
-        <div class="imageLabel">State When The Cross Button Is Hovered</div>
-        <img src="assets/powerpoint/search_box_powerpoint_hover_cross.png" alt="PowerPoint search box cancel button hovered state">
       </div>
-      <div class="sectionTitle">
-        <h2>1. Inputs</h2>
+      <div>
+        <h2 class="sectionTitle">1. Inputs</h2>
         <h4 class="sectionIntro">Analyzing the inputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
       </div>
       <div>
@@ -89,7 +85,7 @@
             <th>Mouse/Touchpad</th>
             <td>
               <ul>
-                <li>Click elsewhere outside of the search box to return to the normal state.</li>
+                <li>Click elsewhere outside of the search box to return to the initial state.</li>
                 <li>Click on the search box to go to focus state.</li>
                 <li>Hover over the star button or click on it.</li>
                 <li>Drag and drop text to copy and paste into the search box.</li>
@@ -144,7 +140,7 @@
                 <li>After entering text into the search box, touching the cross icon clears the search text. </li>
               </ul>
             </td>
-            <td id="na">N/A</td>
+            <td class="na">N/A</td>
             <td>
               <ul>
                 <li>Touching the reading glass icon makes the search box appear and touching elsewhere outside the search box makes it disappear.</li>
@@ -172,8 +168,8 @@
           For search boxes, Chrome works the best in terms of accessibility and PhotoShop and PowerPoint are similar to each other but less accessible than Chrome.
         </p>
       </div>
-      <div class="sectionTitle">
-        <h2>2. Outputs</h2>
+      <div>
+        <h2 class="sectionTitle">2. Outputs</h2>
         <h4 class="sectionIntro">Analyzing the outputs for the search box component in Chrome, PhotoShop and PowerPoint</h4>
       </div>
       <div>
@@ -244,11 +240,30 @@
                 <li>A cross icon appears when the user starts typing, touching the cross icon clears the search text.</li>
               </ul>
             </td>
-            <td>N/A</td>
+            <td class="na">N/A</td>
             <td>
               <ul>
                 <li>Touching the reading glass icon makes the search box appear with a cursor and the background color unchanged.</li>
                 <li>The cross icon works the same as Chrome.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Screen reader</th>
+            <td>
+              <ul>
+                <li>When on a button, the screen reader reads out the functionality of that button even though it is just an icon (the bookmark icon).</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>The screen reader tells the user to use “w” key to perform an action listed as an item in the dropdown, in addition to reading out the option.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>The screen reader informs the user of the next steps. For example, it says using up and down keys allows users to navigate items in the dropdown.</li>
+                <li>And when on an item in the dropdown, it says pressing Ctrl-Option-Space selects this item.</li>
               </ul>
             </td>
           </tr>
@@ -260,52 +275,35 @@
             <li>After the user starts typing, pressing the tab button moves the focus to a cross button.</li>
             <li>When the focus is already on the cross button, pressing the tab further moves cursor down the options in the dropdown.</li>
           </ul>
-        </p>
-        <div>
-          Using the screen reader:
-          <p>The screen reader reads out the text entered into the search box.</p>
-          <div>Chrome</div>
-          <ul>
-            <li>When on a button, the screen reader reads out the functionality of that button even though it is just an icon (the bookmark icon).</li>
-          </ul> 
-          <p>PhotoShop</p>
-          <ul>
-            <li>The screen reader tells the user to use “w” key to perform an action listed as an item in the dropdown, in addition to reading out the option.</li>
-          </ul>
-          <p>PowerPoint</p>
-          <ul>
-            <li>The screen reader informs the user of the next steps. For example, it says using up and down keys allows users to navigate items in the dropdown.</li>
-            <li>And when on an item in the dropdown, it says pressing Ctrl-Option-Space selects this item.</li>
-          </ul>
-        </div>
+        </p>  
       </div>
-      <div class="sectionTitle">
-        <h2>3. State Models</h2>
+      <div>
+        <h2 class="sectionTitle">3. State Models</h2>
         <h4 class="sectionIntro">Creating state models for the search box component in PowerPoint and making an intentional tradeoff by making the component less usable for mouse users but more usable for keyboard users</h4>
       </div>
       <div>
         <div class="imageLabel">Original State Diagram For Mouse Users:</div>
-        <img src="assets/state_diagrams/state_diagram_original_mouse.png" alt="Original state diagram for mouse users">
+        <img class="diagramImage" src="assets/state_diagrams/state_diagram_original_mouse.png" alt="Original state diagram for mouse users">
         <div class="imageLabel">Original State Diagram For Keyboard Users:</div>
-        <img src="assets/state_diagrams/state_diagram_original_keyboard.png" alt="Original state diagram for keyboard users">
+        <img class="diagramImage" src="assets/state_diagrams/state_diagram_original_keyboard.png" alt="Original state diagram for keyboard users">
         <div class="imageLabel">Revised State Diagram For Mouse Users:</div>
-        <img src="assets/state_diagrams/state_diagram_revised_mouse.png" alt="Revised state diagram for mouse users">
+        <img class="diagramImage" src="assets/state_diagrams/state_diagram_revised_mouse.png" alt="Revised state diagram for mouse users">
         <div class="imageLabel">Revised State Diagram For Keyboard Users:</div>
-        <img src="assets/state_diagrams/state_diagram_revised_keyboard.png" alt="Revised state diagram for keyboard users">
+        <img class="diagramImage" src="assets/state_diagrams/state_diagram_revised_keyboard.png" alt="Revised state diagram for keyboard users">
       </div>
-      <div class="sectionTitle">
-        <h2>4. Component Redesign</h1>
+      <div>
+        <h2 class="sectionTitle">4. Component Redesign</h1>
         <h4 class="sectionIntro">Redesigning the search box component for better user experience</h4>
       </div>
       <div>
         <div class="imageLabel">Redesigned Component:</div>
         <img src="assets/redesigned_search_box.png" alt="Redesigned search box">
       </div>
-      <div class="sectionTitle">
-        <h2>5. Reflection</h2>
+      <div>
+        <h2 class="sectionTitle">5. Reflection</h2>
         <h4 class="sectionIntro">Reflecting on the existing search box component and my redesigned component</h4>
       </div>
-      <div>
+      <div id="reflection">
         <ul>
           <li>The search box for Chrome does well in usability by providing a list of search history when in active state and I incorporated it in my redesign of the PowerPoint search box.</li>
           <li>The PowerPoint search box does well in accessibility by allowing user to go from active state to original state with a Tab and I kept it in the redesign.</li>
@@ -318,8 +316,11 @@
           <li>This choice will also make the component more accessible for people who cannot use the mouse.</li>
         </ul>
       </div>
-      <div class="sectionTitle">
-        <h2>6. Reference</h2>
+      <div>
+        <h2 class="sectionTitle">6. Reference</h2>
+        <ul>
+          <li><a href="https://stackoverflow.com/questions/71259584/my-css-changes-doesnt-show-h1-and-h2-problems">How to define styles with classname, id and tag (StackOverflow)</a></li>
+        </ul>
       </div>
     </div>
     
