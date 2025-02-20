@@ -25,6 +25,17 @@
         </div>
       </div>
       <div>
+        <p>
+          This study aims at analyzing existing search box components in three 
+          commonly used applications: Chrome, PhotoShop and PowerPoint. It 
+          includes screenshots of different states of the search box components, 
+          analyzes its inputs and outputs (including for mouse/trackpad users,
+          keyboard users, touch screen users and possibly for screen reader users),
+          presents state diagrams of the search box component in PowerPoint and their
+          revised versions and shares a reflection on the study. 
+        </p>
+      </div>
+      <div>
         <h2 class="sectionTitle">0. Images</h2>
         <h4 class="sectionIntro">Images of existing search box components in Chrome, PhotoShop and PowerPoint</h4>
       </div>
@@ -291,13 +302,36 @@
         <div class="imageLabel">Revised State Diagram For Keyboard Users:</div>
         <img class="diagramImage" src="assets/state_diagrams/state_diagram_revised_keyboard.png" alt="Revised state diagram for keyboard users">
       </div>
+      <div id="stateDiagramDescription">
+        <ul>
+          <li>
+            In the revised state diagrams, the mouse/trackpad users and the keyboard users
+            will need to perform the same action twice, once to go from the active state 
+             to the selected state and once to move from the selected state to the original state. 
+           The mouse/trackpad users need to click somewhere outside of the search box,
+           and the keyboard users need to press the tab key.
+          </li>
+          <li>
+            When the user wants to go directly 
+            from the active state to the original state, the mouse/trackpad users need to click on 
+            the cross button while teh keyboard users need to press the Esc key.
+          </li>
+          <li>
+            By making the users perform the same action to move from active to selected and selected to original state, 
+          the revised state diagrams improve the learnability and memorability of the search boxes. 
+          And by adding the possibility for switching from the active state to the selected state, which 
+          was originally not available for keyboard users, the revised state diagram sacrificed efficiency 
+          for memorability and learnability.
+          </li>
+        </ul>
+      </div>
       <div>
         <h2 class="sectionTitle">4. Component Redesign</h1>
         <h4 class="sectionIntro">Redesigning the search box component for better user experience</h4>
       </div>
       <div>
         <div class="imageLabel">Redesigned Component:</div>
-        <img src="assets/redesigned_search_box.png" alt="Redesigned search box">
+        <img src="assets/Search Box.png" alt="Redesigned search box">
       </div>
       <div>
         <h2 class="sectionTitle">5. Reflection</h2>
